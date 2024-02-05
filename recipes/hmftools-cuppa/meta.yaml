@@ -8,7 +8,7 @@ package:
 
 source:
   - folder: jar
-    url: https://github.com/hartwigmedical/hmftools/releases/download/cuppa-v{{ version }}/cuppa-{{ version }}.jar
+    url: https://github.com/hartwigmedical/hmftools/releases/download/cuppa-v{{ version }}/cuppa_v{{ version }}.jar
     sha256: '{{ sha256_jar }}'
   - folder: src
     url: https://github.com/hartwigmedical/hmftools/archive/refs/tags/cuppa-v{{ version }}.tar.gz

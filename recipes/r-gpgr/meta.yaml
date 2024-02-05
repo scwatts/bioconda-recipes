@@ -19,11 +19,11 @@ requirements:
   host:
     - r-base
     - r-tidyr
-    - r-dyplr
+    - r-dplyr
   run:
     - r-base
     - r-tidyr
-    - r-dyplr
+    - r-dplyr
 
 test:
   commands:

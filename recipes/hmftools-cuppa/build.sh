@@ -5,7 +5,7 @@ TGT="$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM"
 [ -d "${PREFIX}/bin" ] || mkdir -p "${PREFIX}/bin"
 
 cd "${SRC_DIR}"
-mv jar/cuppa-${PKG_VERSION}.jar $TGT/cuppa.jar
+mv jar/cuppa*.jar $TGT/cuppa.jar
 mv src/cuppa/src/main/resources/cuppa-chart/* $TGT/chart/
 
 cp $RECIPE_DIR/cuppa.sh $TGT/cuppa
