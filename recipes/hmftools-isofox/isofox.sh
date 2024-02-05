@@ -1,5 +1,5 @@
 #!/bin/bash
-# hmftools isofox executable shell script
+# hmftools Isofox executable shell script
 # https://github.com/hartwigmedical/hmftools/tree/master/isofox
 set -eu -o pipefail
 
@@ -46,8 +46,8 @@ for arg in "$@"; do
             ;;
          *)
 	    if [[ ${pass_args} == '' ]] #needed to avoid preceeding space on first arg e.g. ' MarkDuplicates'
-            then 
-                pass_args="$arg" 
+            then
+                pass_args="$arg"
 	    else
                 pass_args="$pass_args \"$arg\"" #quotes later arguments to avoid problem with ()s in MarkDuplicates regex arg
             fi

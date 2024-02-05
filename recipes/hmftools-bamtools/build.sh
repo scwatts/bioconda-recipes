@@ -5,8 +5,8 @@ TGT="$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM"
 [ -d "${PREFIX}/bin" ] || mkdir -p "${PREFIX}/bin"
 
 cd "${SRC_DIR}"
-mv sv-prep*.jar $TGT/sv-prep.jar
+mv bamtools*.jar $TGT/bamtools.jar
 
-cp $RECIPE_DIR/SvPrep.sh $TGT/SvPrep
-ln -s $TGT/SvPrep $PREFIX/bin
-chmod 0755 "${PREFIX}/bin/SvPrep"
+cp $RECIPE_DIR/bamtools.sh $TGT/bamtools
+ln -s $TGT/bamtools $PREFIX/bin
+chmod 0755 "${PREFIX}/bin/bamtools"

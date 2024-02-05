@@ -6,7 +6,7 @@ package:
   version: '{{ version }}'
 
 source:
-  url: 'https://github.com/hartwigmedical/hmftools/releases/download/sigs-v{{ version }}/sigs_v{{ version }}.jar'
+  url: https://github.com/hartwigmedical/hmftools/releases/download/sigs-v{{ version }}/sigs_v{{ version }}.jar
   sha256: '{{ sha256 }}'
 
 build:
@@ -15,7 +15,6 @@ build:
 
 requirements:
   run:
-    - zlib
     - openjdk >=8
 
 test:
@@ -24,6 +23,6 @@ test:
 
 about:
   home: https://github.com/hartwigmedical/hmftools/blob/master/sigs/README.md
-  license:  "GNU General Public v3 (GPLv3)"
+  license: GPL-3.0-only
   license_family: GPL3
   summary: Fits sample SNV counts to trinucleotide signature definitions.

@@ -1,6 +1,6 @@
 #!/bin/bash
-# hmftools ORANGE executable shell script
-# https://github.com/hartwigmedical/hmftools/tree/master/orange
+# hmftools Virus Interpreter executable shell script
+# https://github.com/hartwigmedical/hmftools/tree/master/virus-interpreter
 set -eu -o pipefail
 
 export LC_ALL=en_US.UTF-8
@@ -62,8 +62,8 @@ fi
 pass_arr=($pass_args)
 if [[ ${pass_arr[0]:=} == org* ]]
 then
-    eval "$java" $jvm_mem_opts $jvm_prop_opts -cp "$JAR_DIR/orange.jar" $pass_args
+    eval "$java" $jvm_mem_opts $jvm_prop_opts -cp "$JAR_DIR/virusinterpreter.jar" $pass_args
 else
-    eval "$java" $jvm_mem_opts $jvm_prop_opts -jar "$JAR_DIR/orange.jar" $pass_args
+    eval "$java" $jvm_mem_opts $jvm_prop_opts -jar "$JAR_DIR/virusinterpreter.jar" $pass_args
 fi
 exit

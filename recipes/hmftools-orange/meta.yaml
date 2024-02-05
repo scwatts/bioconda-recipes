@@ -1,12 +1,12 @@
-{% set version = "3.0.0" %}
-{% set sha256 = "ba3887c741501bd0d0815e701b68fe7a51dace01560ebd6e0f0647ff8c385e98" %}
+{% set version = "3.0.2" %}
+{% set sha256 = "11723a5478bc45ae6c6e5442f7086b78162b3973802c2572441a439751c45713" %}
 
 package:
   name: hmftools-orange
   version: '{{ version }}'
 
 source:
-  url: 'https://github.com/hartwigmedical/hmftools/releases/download/orange-v{{ version }}/orange_v{{ version }}.jar'
+  url: https://github.com/hartwigmedical/hmftools/releases/download/orange-v{{ version }}/orange.jar
   sha256: '{{ sha256 }}'
 
 build:
@@ -17,15 +17,14 @@ build:
 
 requirements:
   run:
-    - zlib
     - openjdk >=8
 
 test:
   commands:
-    - 'orange 2>&1 | grep -q "ORANGE"'
+    - 'orange -version | grep Orange'
 
 about:
   home: https://github.com/hartwigmedical/hmftools/blob/master/orange/README.md
-  license:  "GNU General Public v3 (GPLv3)"
+  license: GPL-3.0-only
   license_family: GPL3
-  summary: ORANGE summarizes the key outputs from all algorithms in the Hartwig suite.
+  summary: ORANGE creates a PDF report summarising key outputs from the hmftools workflow.

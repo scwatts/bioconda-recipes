@@ -1,0 +1,36 @@
+{% set version = "1.4.5" %}
+{% set sha256 = "61451925aef1972c839ecf8b4c25f8aa08ac4459f6c09ae7a0ae71cf58dee479" %}
+
+package:
+  name: r-gpgr
+  version: '{{ version }}'
+
+source:
+  url: https://github.com/umccr/gpgr/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: '{{ sha256 }}'
+
+build:
+  noarch: generic
+  number: 0
+  run_exports:
+    - {{ pin_subpackage("r-gpgr", max_pin="x.x") }}
+
+requirements:
+  host:
+    - r-base
+    - r-tidyr
+    - r-dyplr
+  run:
+    - r-base
+    - r-tidyr
+    - r-dyplr
+
+test:
+  commands:
+    - $R -e "library('gpgr')"
+
+about:
+  home: https://github.com/umccr/gpgr
+  license: MIT + file LICENSE
+  license_family: MIT
+  summary: Generates interactive reports for various tools
