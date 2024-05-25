@@ -11,14 +11,14 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('hmftools-mark-dups', max_pin="x.x") }}
 
 requirements:
   run:
     - openjdk >=8
-    - sambamba >=1.0
+    - sambamba >=1.0.1
     - samtools >=1.17
 
 test:
